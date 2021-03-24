@@ -4,7 +4,7 @@ const button = document.getElementById('button');
 const resetButton = document.getElementById('reset-button');
 const guess = document.getElementById('guess');
 const results = document.getElementById('results');
-const magicNumber = Number(Math.ceil(Math.random() * 20));
+let magicNumber;
 const attemptsNum = document.getElementById('attempts-counter');
 const message = document.getElementById('exit-prompt');
 console.log('magic', magicNumber);
@@ -18,7 +18,7 @@ button.addEventListener('click', () => {
     
     attempts--;
     attemptsNum.textContent = attempts;
-
+    magicNumber = Number(Math.ceil(Math.random() * 20));
     
 
 
@@ -50,6 +50,6 @@ resetButton.addEventListener('click', () => {
     results.textContent = '';
     message.textContent = 'Let\'s go again!';
     guess.value = '';
-    
+    magicNumber = Number(Math.ceil(Math.random() * 20));
     
 });
