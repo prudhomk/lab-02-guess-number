@@ -45,12 +45,11 @@ button.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     resetButton.disabled = true;
     button.disabled = false;
+    attempts = 4;
+    attemptsNum.textContent = attempts;
+    results.textContent = '';
+    message.textContent = 'Let\'s go again!';
+    guess.value = '';
     
-    if (attempts === 4) {
-        attemptsNum.textContent = attempts;
-        results.textContent = '';
-        message.textcontent = 'Let\'s go again!';
-        guess.value = '';
-    }
     
 });
