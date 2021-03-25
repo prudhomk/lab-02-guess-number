@@ -38,7 +38,7 @@ button.addEventListener('click', () => {
     if (attempts === 0) {
         button.disabled = true;
         resetButton.disabled = false;
-        message.textContent = 'Thanks for playing!';
+        message.textContent = 'Try guessing the correct number!';
     }
 }); 
 
